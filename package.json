@@ -1,0 +1,26 @@
+{
+  "name": "milestoneproject3-backend",
+  "version": "1.0.0",
+  "description": "This milestone project takes place at the end of the web engineer unit, and concludes the software development program. It's mean to put into practice the skills you learned in courses 9 (Cybersecurity), 10 (Principles of Programming with Python), and 11 (Advanced Topics)Â¸ as well as the rest of the course.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AydaMkd/milestoneProject3-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AydaMkd/milestoneProject3-backend/issues"
+  },
+  "homepage": "https://github.com/AydaMkd/milestoneProject3-backend#readme",
+  "dependencies": {
+    "config": "^3.3.7",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.4"
+  }
+}
