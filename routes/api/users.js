@@ -1,7 +1,11 @@
 const express = require("express");
 const router = express.Router();
+const {check ,validationResult} = require('express-validator');
 
+//register user
+router.post('/', (req,res) => {
+    console.log(req.body);
+    res.send('User route');
+});
 
-router.get('/', (req,res) => res.send('User route'));
-
-module.exprots = router;
+module.exports = router;

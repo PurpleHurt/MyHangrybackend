@@ -2,6 +2,6 @@ const express = require("express");
 const router = express.Router();
 
 
-router.get('/', (req,res) => res.send('Comment route'));
+router.get('/', (req,res) => res.send('Auth route'));
 
 module.exports = router;
