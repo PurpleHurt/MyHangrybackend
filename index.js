@@ -9,7 +9,7 @@ const connectDB = require("./config/db");
 //connect database
 connectDB();
 
-app.get("/", (req,res)=> res.send("API running"));
+// app.get("/", (req,res)=> res.send("API running"));
 
 //Init Middleware
 app.use(express.json({extended:false}));
