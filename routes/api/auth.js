@@ -60,7 +60,7 @@ router.get('/', auth, async (req, res) => {
           { expiresIn: '2 days' },
           (err, token) => {
             if (err) throw err;
-            res.json({ token });
+            res.json({ user,token });
           }
         );
       } catch (err) {
