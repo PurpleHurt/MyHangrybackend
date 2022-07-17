@@ -13,8 +13,8 @@ cuisines: { type: String, required: true },
 // difficulty: { type: Array, enum: ["Easy", "Medium", "Hard"], required: true},
 preptime: { type: String },
 cooktime: { type: String },
-ingredients: { type:Array, required: true },
-steps: { type:Array, required: true },
+// ingredients: { type:Array, required: true },
+// steps: { type:Array, required: true },
 description: { type: String, required: true },
 name: {
     type: String

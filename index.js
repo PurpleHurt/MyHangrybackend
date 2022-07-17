@@ -18,9 +18,8 @@ app.use(express.json({extended:false}));
 
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/comment', require('./routes/api/comment'));
-app.use('/api/recipe', require('./routes/api/recipe'));
+app.use('/api/recipes', require('./routes/api/recipes'));
 app.use('/api/auth', require('./routes/api/auth'));
-app.use('/api/recipe/newrecipe', require('./routes/api/recipe'));
 
 
 
