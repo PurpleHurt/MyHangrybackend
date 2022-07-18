@@ -10,11 +10,13 @@ user:{
 recipename: { type: String, required: true },
 image: { type: String, default: 'http://placekitten.com/350/350'},
 cuisines: { type: String, required: true },
-// difficulty: { type: Array, enum: ["Easy", "Medium", "Hard"], required: true},
+// difficulty: { type: String, enum: ["Easy", "Medium", "Hard"], required: true},
+difficulty: { type: String},
 preptime: { type: String },
 cooktime: { type: String },
-// ingredients: { type:Array, required: true },
-// steps: { type:Array, required: true },
+ingredients: { type:String, required: true },
+directions: { type: String, required: true },
+steps: { type:Array, required: true },
 description: { type: String, required: true },
 name: {
     type: String
