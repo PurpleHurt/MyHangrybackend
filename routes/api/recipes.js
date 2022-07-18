@@ -59,6 +59,14 @@ router.post(
       res.status(500).send('Server Error');
     }
   });
- 
+  router.get('/myrecipes', auth, async (req, res) => {
+    try {
+      const recipes = await Recipe.find({user: req.user.id}).sort({ date: -1 });
+      res.json(recipes);
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send('Server Error');
+    }
+  });
 
 module.exports = router;
