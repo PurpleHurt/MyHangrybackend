@@ -76,4 +76,29 @@ router.post(
     }
   });
 
+  router.get('/myrecipes', auth, async (req, res) => {
+    try {
+      const recipes = await Recipe.find({user: req.user.id}).sort({ date: -1 });
+      res.json(recipes);
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send('Server Error');
+    }
+  });
+ 
+  router.get('/search/:query', auth, async (req, res) => {
+    try {
+      //  const { name } = req.query;
+      const recipes = await 
+      Recipe.find({ingredients: { $regex: '.*' + req.params.query + '.*' } });
+      res.json(recipes);
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send('Server Error');
+     
+    }
+  });
+  
+  
+
 module.exports = router;
