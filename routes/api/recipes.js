@@ -99,6 +99,18 @@ router.post(
     }
   });
   
+  router.get('/value/:query', auth, async (req, res) => {
+    try {
+      //  const { name } = req.query;
+      const recipes = await 
+      Recipe.findOne({recipename: { $regex: '.*' + req.params.query + '.*' } });
+      res.json(recipes);
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send('Server Error');
+     
+    }
+  });
   
 
 module.exports = router;
