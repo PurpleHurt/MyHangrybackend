@@ -25,22 +25,42 @@ This milestone project takes place at the end of the web engineer unit, and conc
 
 ## Team Name
 
-Team Hungry
+ **Team Hungry**
 
 ### Credits
 Made by:
-- [Christina Hurt](https://www.linkedin.com/in/christina-hurt-27445550/)
-- [Justin Whistle](https://www.linkedin.com/in/justin-whistle/)
-- [Ayda Mkaddem](https://www.linkedin.com/in/ayda-mkaddem-5a6b6a238/)
-- [Bertha Zhao](https://www.linkedin.com/in/bertha-zhao-21653b91/)       
+- [![Linkedin](https://i.stack.imgur.com/gVE0j.png)][Christina Hurt](https://www.linkedin.com/in/christina-hurt-27445550/)
+- [![Linkedin](https://i.stack.imgur.com/gVE0j.png)][Justin Whistle](https://www.linkedin.com/in/justin-whistle/)
+- [![Linkedin](https://i.stack.imgur.com/gVE0j.png)][Ayda Mkaddem](https://www.linkedin.com/in/ayda-mkaddem-5a6b6a238/)
+- [![Linkedin](https://i.stack.imgur.com/gVE0j.png)][Bertha Zhao](https://www.linkedin.com/in/bertha-zhao-21653b91/)       
 
 
 ## Application name
 
-Hangry Nomster
+![Image of our logo](https://github.com/AydaMkd/milestoneProject3-frontend/blob/main/public/images/HangryLogo2.jpeg?raw=true)
+
 
 ## Wireframe
-(add image of wireframe)
+<br>
+ 
+ ### Home Page before Login
+
+ ![Image of our Home page before login](https://github.com/AydaMkd/milestoneProject3-frontend/blob/main/public/images/HomePage.png?raw=true)
+ <br>
+
+ ![Image of our recipes before login](https://github.com/AydaMkd/milestoneProject3-frontend/blob/main/public/images/Recipes.png?raw=true)
+ 
+ <br>
+
+ ### Home Page after Login
+<br>
+
+![Image of our Home Page after login](https://github.com/AydaMkd/milestoneProject3-frontend/blob/main/public/images/Profile.png?raw=true)
+
+<br>
+
+![Image of My Recipes after login](https://github.com/AydaMkd/milestoneProject3-frontend/blob/main/public/images/MyRecipes.png?raw=true) 
+<br>
 
 ## Technology
   ### Front End
@@ -49,8 +69,8 @@ Hangry Nomster
   ### Back End  
     - Node
     - MongoDb
-    - Sequelize
-    - PassportJS
+    - Mongoose
+    - JWT
 
 ## Install & Run
  (copy link )
@@ -59,7 +79,19 @@ Hangry Nomster
 User should be able to submit their own recipes, keep their favorite receipts, rate and comment in other user's recipes. 
 
 ## Sources
-(copy link of our souces)
+### Learned to align images on readme.
+(https://stackoverflow.com/questions/12090472/how-do-i-center-an-image-in-the-readme-md-file-on-github)
+
+### YouTube tutorial on how to start a recipe app.
+
+(https://www.youtube.com/watch?v=xc4uOzlndAk)
+
+### guide to add background images.
+(https://www.w3schools.com/jsref/prop_style_backgroundimage.asp)
+
+### bootstrap cards documentation.
+(https://www.w3schools.com/bootstrap4/bootstrap_cards.asp)
+a
 ## Tracking progress
 
 - [Trello](https://trello.com/invite/b/AsBfEMwg/66a0d22147eb32999c88a726b98d6b04/kans-sd-01-final-project)
@@ -87,12 +119,15 @@ User should be able to submit their own recipes, keep their favorite receipts, r
 ### Issues
 
 #### Working as a team being in constant communication is key. We do run into a merge issues with our branches.
+<br>
+
 ### What we learned:
 - When working as a team, make sure to work in the latest version of the repository.
 - git pull origin main it is a must, so you do not override the previous work of your team.
 - Connecting the Front-End with Back-End.
--
-- 
+- Some programs version number change so our code deprecated. The code superseded by newer code. Code was not inmediately removed because can cause a regression in the application. 
+- Time frame, Install everything we want in short amount of time.
+
 ### Work In Progress
 - Calorie Counts
 - Serving Conversion (MyCookbook.io)
