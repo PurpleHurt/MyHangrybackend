@@ -75,6 +75,38 @@ router.post(
       res.status(500).send('Server Error');
     }
   });
+  router.get('/:id', auth, async (req, res) => {
+    try {
+      const recipes = await Recipe.find({user: req.params.id});
+      res.json(recipes);
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send('Server Error');
+    }
+  });
+  //delete recipe
+  router.delete('/:id', [auth, checkObjectId('id')], async (req, res) => {
+    try {
+      const recipe = await Recipe.findById(req.params.id);
+  
+      if (!recipe) {
+        return res.status(404).json({ msg: 'Recipe not found' });
+      }
+  
+      // Check user
+      if (recipe.user.toString() !== req.user.id) {
+        return res.status(401).json({ msg: 'User not authorized' });
+      }
+  
+      await recipe.remove();
+  
+      res.json({ msg: 'Recipe removed' });
+    } catch (err) {
+      console.error(err.message);
+  
+      res.status(500).send('Server Error');
+    }
+  });
 
   router.get('/myrecipes', auth, async (req, res) => {
     try {
@@ -112,6 +144,30 @@ router.post(
     }
   });
   
+   //edit recipe
+   router.put('/:id', [auth, checkObjectId('id')], async (req, res) => {
+     try{
+      const recipe = await Recipe.findById(req.params.id);
+  
+      if (!recipe) {
+        return res.status(404).json({ msg: 'Recipe not found' });
+      }
+  
+      // Check user
+      if (recipe.user.toString() !== req.user.id) {
+        return res.status(401).json({ msg: 'User not authorized' });
+      }
+      Object.assign(recipe, req.body)
+            await recipe.save()
+            res.json(recipe)
+  
+      res.json({ msg: 'Recipe saved' });
+    } catch (err) {
+      console.error(err.message);
+
+    }
+    
+  });
   // post a comment
 router.post(
   '/comment/:id',
