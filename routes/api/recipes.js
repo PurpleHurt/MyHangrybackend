@@ -75,6 +75,38 @@ router.post(
       res.status(500).send('Server Error');
     }
   });
+  router.get('/:id', auth, async (req, res) => {
+    try {
+      const recipes = await Recipe.find({user: req.params.id});
+      res.json(recipes);
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send('Server Error');
+    }
+  });
+  //delete recipe
+  router.delete('/:id', [auth, checkObjectId('id')], async (req, res) => {
+    try {
+      const recipe = await Recipe.findById(req.params.id);
+  
+      if (!recipe) {
+        return res.status(404).json({ msg: 'Recipe not found' });
+      }
+  
+      // Check user
+      if (recipe.user.toString() !== req.user.id) {
+        return res.status(401).json({ msg: 'User not authorized' });
+      }
+  
+      await recipe.remove();
+  
+      res.json({ msg: 'Recipe removed' });
+    } catch (err) {
+      console.error(err.message);
+  
+      res.status(500).send('Server Error');
+    }
+  });
 
   router.get('/myrecipes', auth, async (req, res) => {
     try {
@@ -99,6 +131,103 @@ router.post(
     }
   });
   
+  router.get('/value/:query', auth, async (req, res) => {
+    try {
+      //  const { name } = req.query;
+      const recipes = await 
+      Recipe.findOne({recipename: { $regex: '.*' + req.params.query + '.*' } });
+      res.json(recipes);
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send('Server Error');
+     
+    }
+  });
   
+   //edit recipe
+   router.put('/:id', [auth, checkObjectId('id')], async (req, res) => {
+     try{
+      const recipe = await Recipe.findById(req.params.id);
+  
+      if (!recipe) {
+        return res.status(404).json({ msg: 'Recipe not found' });
+      }
+  
+      // Check user
+      if (recipe.user.toString() !== req.user.id) {
+        return res.status(401).json({ msg: 'User not authorized' });
+      }
+      Object.assign(recipe, req.body)
+            await recipe.save()
+            res.json(recipe)
+  
+      res.json({ msg: 'Recipe saved' });
+    } catch (err) {
+      console.error(err.message);
 
+    }
+    
+  });
+  // post a comment
+router.post(
+  '/comment/:id',
+   auth,
+ 
+  
+  check('text', 'Text is required').notEmpty(),
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+
+    try {
+      const user = await User.findById(req.user.id).select('-password');
+      const recipe = await Recipe.findById(req.params.id);
+
+      const  newComment = {
+        text: req.body.text,
+        name: user.username,
+        avatar: user.avatar,
+        user: req.user.id
+      };
+       recipe.comments.unshift(newComment)
+       await recipe.save();
+
+      res.json(recipe.comments);
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send('Server Error');
+    }
+  }
+);
+//delete comment
+router.delete(
+  '/comment/:id/:comment_id',
+   auth, async (req, res) => {
+   
+    try {
+      
+      const recipe = await Recipe.findById(req.params.id);
+      // get the comment from the recipe
+      const comment = recipe.comments.find(comment=> comment.id == req.params.comment_id);
+      if (!comment){
+        return res.status(404).json({msg: 'Comment does not exist'});
+      }
+      // check user 
+      if (comment.user.toString()!== req.user.id){
+        return res.status(401).json({msg: "User not authorized"});
+      }
+    // remove index
+    const removeIndex = recipe.comments.map(comment=> comment.user.toString())
+    .indexOf(req.user.id);
+    recipe.comments.splice(removeIndex,1);
+    await recipe.save();
+    res.json(recipe.comments)
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send('Server Error');
+    }
+  }
+);
 module.exports = router;
