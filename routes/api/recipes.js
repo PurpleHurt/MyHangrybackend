@@ -17,9 +17,7 @@ router.post(
     check('cuisines', 'Cuisine is required').notEmpty(),
     check('ingredients', 'Recipe ingredients are required').notEmpty(),
     check('directions', 'Directions are required').notEmpty(),
-    check('steps', 'Steps required').notEmpty(),
-    
-    check('description', 'Description is required').notEmpty(),
+     check('description', 'Description is required').notEmpty(),
     async (req, res) => {
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
@@ -38,7 +36,6 @@ router.post(
           cooktime: req.body.cooktime,
           ingredients: req.body.ingredients,
           directions: req.body.directions,
-          steps: req.body.steps,
           description: req.body.description,
           
           name: user.username,
