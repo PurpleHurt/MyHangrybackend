@@ -16,7 +16,6 @@ preptime: { type: String },
 cooktime: { type: String },
 ingredients: { type:String, required: true },
 directions: { type: String, required: true },
-steps: { type:Array, required: true },
 description: { type: String, required: true },
 name: {
     type: String
