@@ -5,7 +5,7 @@ const auth = require('../../middleware/auth');
 
 const User = require('../../models/User');
 
-const Recipe = require('../../models/Recette');
+const Recipe = require('../../models/Recipe');
 const checkObjectId = require('../../middleware/checkObjectId');
 const { numberParser } = require("config/parser");
 
@@ -41,7 +41,6 @@ router.post(
         description: req.body.description,
         
         name: user.username,
-        avatar: user.avatar,
         user: req.user.id
       });
 
