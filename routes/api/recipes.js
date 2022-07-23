@@ -5,7 +5,7 @@ const auth = require('../../middleware/auth');
 
 const User = require('../../models/User');
 
-const Recipe = require('../../models/Recipe');
+const Recipe = require('../../models/Rectte');
 const checkObjectId = require('../../middleware/checkObjectId');
 const { numberParser } = require("config/parser");
 
@@ -124,7 +124,7 @@ router.put('/myrecipes/:id/:user', auth, async (req, res) => {
   }
 });
 
-router.get('/search/:query', auth, async (req, res) => {
+router.get('/search/:query', async (req, res) => {
   try {
     //  const { name } = req.query;
     const recipes = await
