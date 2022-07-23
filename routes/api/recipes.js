@@ -5,7 +5,7 @@ const auth = require('../../middleware/auth');
 
 const User = require('../../models/User');
 
-const Recipe = require('../../models/Rectte');
+const Recipe = require('../../models/Recipe');
 const checkObjectId = require('../../middleware/checkObjectId');
 const { numberParser } = require("config/parser");
 
