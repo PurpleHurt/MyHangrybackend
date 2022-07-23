@@ -94,7 +94,7 @@ Made by:
   ### Back End  
     - Node w/express
     - MongoDb
-    - PassportJS
+    - Mongoose
     - Heroku
 
 ## Install & Run
