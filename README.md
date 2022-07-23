@@ -13,6 +13,8 @@ https://recipesharingfrontend.herokuapp.com/
 - [Team](#team)
 - [Credits](#credits)
 - [Application](#application)
+- [Api](#api)
+- [App](#app)
 - [Wireframe](#wireframe)
 - [Technology](#technology)
 - [Install & Run](#install)
@@ -42,6 +44,27 @@ Made by:
 
 ![Image of our logo](https://github.com/AydaMkd/milestoneProject3-frontend/blob/main/public/images/HangryLogo2.jpeg?raw=true)
 
+### API (http://localhost:5000)
+| Method | Path                                 | Purpose                                   |
+| ------ | ------------------------------------ | ----------------------------------------- |
+| POST   | /                                    | Adds a recipe                             |
+| GET    | /                                    | Shows details of a recipe                 |
+| GET    | /myrecipes.                          | Show details of your saved myrecipe       |              
+| DELETE | /myrecipes/:id.                      | Deletes your saved myrecipe               |
+| PUT    | /myrecipes/:id/user.                 | Edits your saved myrecipe                 |
+| DELETE | /search/:query.                      | Searches recipe names                     | 
+
+### App (http://localhost:3000)
+| Path                  | Component                 | Purpose                                                                         |
+| --------------------- | ------------------------- | ------------------------------------------------------------------------------- |
+| /sign-up              | `users/SignUpForm.js`     | Takes you to the signup form                                                    |
+| /login                | `users/LoginForm.js`      | Takes you to the login screen                                                   |
+| /edit                 | `components/Edit.js`      | Allows you to edit a myrecipe                                                   |
+| /about                | `components/About.js`     | Takes you to the about page.                                                    |
+| /recipes.             | `components/Recipes.js`   | Shows all user's saved recipes                                                  |
+| /myrecipe             | `components/MyRecipe.js`  | Shows all saved recipes by logged in user                                       |
+| /newrecipe            | `components/MyRecipe.js`  | Takes logged in user to the add recipe page                                     |
+| /nutrition            | `components/Nutrition.js` | Search for calories
 
 ## Wireframe
 <br>
@@ -139,3 +162,4 @@ User should be able to submit their own recipes, keep their favorite receipts, r
 - Add Difficulty Rating
 - inventory of ingredients in pantry 
 - link to grocery store shopping car for missing ingredients
+
