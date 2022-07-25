@@ -1,5 +1,5 @@
 # milestoneProject3-frontend
-This milestone project takes place at the end of the web engineer unit, and concludes the software development program. It's mean to put into practice the skills you learned in courses 9 (Cybersecurity), 10 (Principles of Programming with Python), and 11 (Advanced Topics)¸ as well as the rest of the course.
+This milestone project takes place at the end of the web engineer unit, and concludes the software development program. It's meant to put into practice the skills you learned in courses 9 (Cybersecurity), 10 (Principles of Programming with Python), and 11 (Advanced Topics)¸ as well as the rest of the course.
 
 ## Deployment
 
@@ -104,7 +104,7 @@ Made by:
  - #### nodemon
 ## Usage
 
-User should be able to submit their own recipes, keep their favorite recipes, rate and comment on other user's recipes. 
+User should be able to submit their own recipes, keep their favorite recipes, rate and comment on other users recipes. 
 
 ## Sources
 
@@ -146,13 +146,13 @@ User should be able to submit their own recipes, keep their favorite recipes, ra
 ### What we learned:
 - When working as a team, make sure to work in the latest version of the repository.
 - Connecting the Front-End with Back-End.
-- Some programs version number change so our code deprecated. The code superseded by newer code. Code was not inmediately removed because can cause a   regression in the application. 
+- Some dependencies have different versions so our code deprecated. The code was superseded by the newer one. Code was not inmediately removed because this can cause a regression in the application. 
 - Time frame, Install everything we want in short amount of time.
 
 ### Work In Progress
-- Calorie Counts
+- Calories Count
 - Serving Conversion (MyCookbook.io)
 - Add Difficulty Rating
-- inventory of ingredients in pantry 
-- link to grocery store shopping cart for the missing ingredients
+- Inventory of ingredients in pantry 
+- Link to grocery store shopping cart for the missing ingredients
 
