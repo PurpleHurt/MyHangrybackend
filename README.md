@@ -104,7 +104,7 @@ Made by:
  - #### nodemon
 ## Usage
 
-User should be able to submit their own recipes, keep their favorite recipes, rate and comment other user's recipes. 
+User should be able to submit their own recipes, keep their favorite recipes, rate and comment on other user's recipes. 
 
 ## Sources
 
