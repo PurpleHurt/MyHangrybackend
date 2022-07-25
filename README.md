@@ -96,6 +96,7 @@ Made by:
     - MongoDb
     - Mongoose
     - Heroku
+    - Postman
 
 ## Install & Run
  - #### Frontend (https://github.com/AydaMkd/milestoneProject3-frontend.git)
