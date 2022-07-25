@@ -133,7 +133,7 @@ User should be able to submit their own recipes, keep their favorite receipts, r
 
  ### Home Page
 
-- Use cards from bootstrap
+- Used cards from bootstrap
 
 [calorieninjas API](https://calorieninjas.com/api)
 
