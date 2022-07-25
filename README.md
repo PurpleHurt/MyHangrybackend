@@ -143,13 +143,6 @@ User should be able to submit their own recipes, keep their favorite receipts, r
 [ColorPalettes2](https://coolors.co/palette/fff460-fccf3c-fc9d28-ed7c1a-f25b09)
 
 
-### Issues
-
-#### - Working as a team and being in constant communication it is key :thumbsup:. We did run into a merge issues with our branches. The person who is going to push new code must do git pull origin main to avoid override someone else code also unecessary branches should be removed after submitting work.  
-#### - Keeping your code in new branches just for fear to breaking something and not sorting your own code to work with main branch it is not an option, because in the end you finish with multiple branches that are behind the main branch. :thumbsdown:
-
-<br>
-
 ### What we learned:
 - When working as a team, make sure to work in the latest version of the repository.
 - Connecting the Front-End with Back-End.
@@ -161,5 +154,5 @@ User should be able to submit their own recipes, keep their favorite receipts, r
 - Serving Conversion (MyCookbook.io)
 - Add Difficulty Rating
 - inventory of ingredients in pantry 
-- link to grocery store shopping car for missing ingredients
+- link to grocery store shopping cart for themissing ingredients
 
